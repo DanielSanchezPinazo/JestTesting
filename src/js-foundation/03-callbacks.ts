@@ -1,5 +1,10 @@
 
-const users = [
+export interface User     {
+    id: number;
+    name: string;
+}
+
+const users: User[] = [
     {
         id: 1,
         name: "John Doe"
@@ -10,7 +15,7 @@ const users = [
     }
 ];
 
-function getUserById( id, callback ) {
+export function getUserById( id: number, callback: (error?: string, user?: User) => void ) {
     const user = users.find( function(user) {
         return user.id === id;
     });
@@ -19,16 +24,18 @@ function getUserById( id, callback ) {
         return callback(`User with id: ${ id } not found.`);
     }
 
-    return callback( null, user );
+    return callback( undefined, user );
     // console.log( {user} );
     // console.log({ user: user }); es similar que lo de arriba
 };
 
-module.exports = {
-    getUserById,
-    users
-};
 // getUserById(1);
+
+// module.exports = {
+//     getUserById,
+//     users
+// };
+
 
 
 

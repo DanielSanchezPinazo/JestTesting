@@ -8,6 +8,7 @@
 // const { getId, getAge } = require('./plugins');
 // const getPokemonById = require("./js-foundation/06-promises");
 // const { buildLogger } = require('./plugins');
+// import { buildLogger } from "./plugins";
 
 // const id = 1;
 
@@ -35,10 +36,12 @@
 
 //! Logger(winston)
 
+
 // const logger = buildLogger("app.js");
 
 
 // logger.log("Hola Mundo");
+
 
 // logger.error("Algo malo pasó");
 
